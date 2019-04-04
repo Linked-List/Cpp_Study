@@ -1,4 +1,4 @@
-CXX             = g++ 
+CXX             = g++
 SRCS            = $(wildcard *.cpp)
 OBJS            = $(SRCS:.cpp=.o)
 TARGET			= main.exe
@@ -10,5 +10,4 @@ $(TARGET) :
 		$(CXX) -c $(SRCS)
 
 clean :
-		rm -f $(TARGET)
-		rm -f *.o
+		rm -f $(TARGET) *.o
