@@ -5,6 +5,8 @@ class People{
 private:
     int age;
 public:
+static int count;
+static int getCount();
     People();
     People(int age);
     ~People();

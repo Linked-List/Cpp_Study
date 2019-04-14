@@ -1,9 +1,14 @@
 #include "People.h"
 
+int People::count = 0;
+
+int People::getCount(){return count;}
+
 People::People(){
-    this->age = 0;
+    this->age = 10;
+    count++;
 }
-People::People(int age): age(age){}
+People::People(int age): age(age){count++;}
 
 void People::setAge(int age){
     this->age = age;
@@ -18,5 +23,6 @@ bool People::isPerson(People *p){
 }
 
 People::~People(){
+    count--;
     std::cout << "[°íÀÎ]" << this->age << std::endl;
 }
