@@ -19,6 +19,7 @@ public:
     }
     void printAll(){
         Node *temp = header->getNextNode();
+        int count=0;
         while(temp!=tailer){
             cout << temp->getString() << endl;
             temp=temp->getNextNode();
