@@ -49,7 +49,7 @@ public:
         ifstream ifs;
         ifs.open("file.txt");
         string data;
-        while(ifs>>data){
+        while(getline(ifs,data)){
             this->add(data);
         }
         ifs.close();
