@@ -54,4 +54,15 @@ public:
         }
         ifs.close();
     }
+    ~List(){
+        Node* temp = header;
+        Node* next = header->getNextNode();
+        while(true){
+            delete temp;
+            if(next == nullptr)
+                break;
+            temp = next;
+            next = next->getNextNode();
+        }
+    }
 };
