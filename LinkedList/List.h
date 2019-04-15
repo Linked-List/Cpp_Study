@@ -40,7 +40,7 @@ public:
         ofs.open("file.txt");
         Node* temp = header->getNextNode();
         while(temp!=tailer){
-            ofs << temp->getString() << "\n";
+            ofs << temp->getString() << endl;
             temp = temp->getNextNode();
         }
         ofs.close();
