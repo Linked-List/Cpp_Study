@@ -14,7 +14,7 @@ public:
     void initList(){
         header = new Node();
         tailer = new Node();
-        header->setNextNode(tailer);
+        (*header).setNextNode(tailer);
         tailer->setPrevNode(header);
     }
     void printAll(){
