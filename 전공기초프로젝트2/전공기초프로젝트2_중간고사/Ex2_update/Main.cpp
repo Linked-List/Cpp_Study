@@ -15,16 +15,17 @@ int main() {
 	cout << "사칙연산중 하나를 선택하시오(+,-,*,/)" << endl;
 	cin >> c;
 
-	if (c == '+') {
+	switch(c){
+	case '+':
 		cl = new Add;
-	}
-	else if (c == '-') {
-		cl = new Sub;
-	}
-	else if (c == '*') {
+		break;
+	case '-':
+		cl = new Div;
+		break;
+	case '*':
 		cl = new Mul;
-	}
-	else if (c == '/') {
+		break;
+	case '/':
 		cl = new Div;
 	}
 
