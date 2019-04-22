@@ -5,9 +5,7 @@ TARGET			= main.exe
 
 all : $(TARGET)
 		$(CXX) -o $(TARGET) $(OBJS)
+		del *.o
 
 $(TARGET) :
 		$(CXX) -c $(SRCS)
-
-clean :
-		rm -f $(TARGET) *.o
