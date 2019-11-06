@@ -1,5 +1,6 @@
 CXX             = g++
-SRCS            = $(wildcard *.cpp)
+DIR				= 
+SRCS            = $(DIR)$(wildcard *.cpp)
 OBJS            = $(SRCS:.cpp=.o)
 TARGET			= main
 

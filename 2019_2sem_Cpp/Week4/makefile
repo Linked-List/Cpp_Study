@@ -1,5 +1,5 @@
 CXX             = g++
-SRCS            = $(wildcard *.cpp)
+SRCS            = Practice04.cpp MyString.cpp
 OBJS            = $(SRCS:.cpp=.o)
 TARGET			= main
 
