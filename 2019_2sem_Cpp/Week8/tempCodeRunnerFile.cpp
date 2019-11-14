@@ -1,1 +1,0 @@
-        cout << curRow << " "<< curCol << " " << num << endl;
