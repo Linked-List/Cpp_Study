@@ -63,14 +63,12 @@ void WordList::add(string str){
     static ofstream out("result.txt");
 
     try{
-        for(int i=0;i<str.length();i++)
-            if(!((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z')))
-                throw string("It is not English");
         CheckDictionary(str);
         CheckDuplication(str);
         CheckConfirm(str);
     }catch(string err){
         out.close();
+        cout << "You Lose. ";
         throw err;
     }
     wordlist.push_back(str);
@@ -84,9 +82,12 @@ void WordList::startGame(){
         cout << "Input word : ";
         cin >> word;
         try{
+            for(int i=0;i<word.length();i++)
+                if(!((word[i] >= 'A' && word[i] <= 'Z') || (word[i] >= 'a' && word[i] <= 'z')))
+                    throw string("It is not English");
             add(word);
         }catch(string err){
-            cout << "You Lose. " + err << endl;
+            cout << err << endl;
             return;
         }
         for(list<string>::iterator i = wordlist.begin() ; i != wordlist.end() ; i++)
