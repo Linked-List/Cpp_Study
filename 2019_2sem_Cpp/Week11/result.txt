@@ -1,0 +1,5 @@
+It is Wrong!                                       
+0x10  - 0x05  =       dec : 11 oct : 0013 hex : 0x0b
+10    * 20    =      dec : 200 oct : 0310 hex : 0xc8
+3     / 2     =                                  1.5
+1     + 2     =        dec : 3 oct : 0003 hex : 0x03
