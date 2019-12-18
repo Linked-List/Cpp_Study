@@ -113,5 +113,23 @@ int main(){
     std::cout << "임시값 p4 증가 : " << p4 << std::endl;
 
 
-    // TODO: new, delete 추가예정
+    // 메모리할당해제 연산자 new delete 오버로딩
+    std::cout << "7-1. 정의해놓은 new 함수 사용 시도" << std::endl;
+    MyClass* z = new MyClass;
+    z->setMyNum(50);
+    std::cout << "z의 주솟값 : " << reinterpret_cast<long>(z) << std::endl;
+    std::cout << "내가 만든 임의메모리 주솟값 : " << reinterpret_cast<long>(myFramePool) << std::endl;
+    std::cout << "일치하는 모습을 보임" << std::endl;
+    std::cout << "z1저장해놨다가 값 사용 : " << z->getMyNum() << std::endl;
+    std::cout << "7-2. delete 함수 사용" << std::endl;
+    delete z;
+    
+    std::cout << "7-3. 배열도 잘 되는가?" << std::endl;
+    z = new MyClass[5];
+    std::cout << "z의 주솟값 : " << reinterpret_cast<long>(z) << std::endl;
+    std::cout << "내가 만든 임의메모리 주솟값 : " << reinterpret_cast<long>(myFramePool) << std::endl;
+    delete[] z;
+    std::cout << "응 안돼~ new[] delete[] 다시 정의해야하는데 안배워서 따로 안함" << std::endl;
+    
+    return 0;
 }
